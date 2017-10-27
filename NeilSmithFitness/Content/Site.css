@@ -1,0 +1,557 @@
+﻿html, body {
+height: 100%;
+width: 100%;
+}
+
+/**************/
+/*Begin Navbar*/
+/**************/
+.navbar {
+    margin-bottom: 0;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: left;
+}
+
+.navbar .container {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.navbar-inverse {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    border-color: transparent;
+    text-align: center;
+
+}
+.navbar-inverse .navbar-brand {
+    color: black;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a>img {
+    height:35px;
+}
+
+
+/**************/
+/*End - Navbar*/
+/**************/
+
+/***********************/
+/*Begin - Welcome Panel*/
+/***********************/
+#welcomePanel {
+    background: url('/Content/images/NeilSmith_BackgroundHome_1920x1280.png') no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+}
+
+#welcomePanel .container{
+    min-height: 100%;  
+    min-height: 100vh;
+    display: flex;
+    text-align:left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#welcomePanel .container h2{
+    border: 2px solid #000000;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #000000;
+    padding: 15px 35px;
+    text-align:left;
+}
+/*********************/
+/*End - Welcome Panel*/
+/*********************/
+
+/*********************************/
+/*Begin - Brief description panel*/
+/*********************************/
+
+.main{
+    /*background: url('/Content/img/WoodBackground3.jpg') no-repeat;*/
+    background-size: cover;
+    background-color:#161616;
+}
+
+.nopadding {
+    padding:0 !important;
+    margin:0 !important;
+}
+
+.card{
+    border: 0.1px solid #000000;
+    text-align: center;
+    margin:15px;
+}
+
+.card h3{
+    font-family: 'Lobster', cursive;
+    font-size:30px;
+    padding-bottom:40px;
+}
+
+.card p{
+    font-family: 'Poppins', cursive;
+    margin:0 auto;
+    padding-bottom:10px;
+}
+
+@media (min-width: 992px) {
+    #photoCarroussel .row {
+        display: flex;
+        align-items: center;
+    }
+
+    #briefDescription .row {
+        display: flex;
+        align-items: center;
+    }
+} 
+ 
+@media (min-width: 1200px){
+    #photoCarroussel .row {
+        display: flex;
+        align-items: center;
+    }
+
+    #briefDescription .row {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767px) {
+    #photoCarroussel .noDisplayForMobile{
+        display:none;
+    }
+
+    #briefDescription .noDisplayForMobile{
+        display:none;
+    }
+
+    .pins{
+        display: flex;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    #photoCarroussel .noDisplayForMobile{
+        display:none;
+    }
+
+    #briefDescription .noDisplayForMobile{
+        display:none;
+    }
+
+    .pins{
+        display: flex;
+    }
+}
+
+/*******************************/
+/*End - Brief description panel*/
+/*******************************/
+
+/**************************/
+/*Start - Facilities panel*/
+/**************************/
+#facilities {
+    background: linear-gradient( rgba(255, 128, 128, 0.3), rgba(255, 255, 153, 0.3),rgba(179, 255, 179, 0.3)), url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one 🙂       */
+    display: flex;
+    align-items: center;
+    
+}
+
+#facilities .container{
+    text-align:center;
+}
+
+#facilities .container > .row{
+    padding:25px;
+}
+
+.pins{
+    display: flex;
+}
+
+.pins img{
+    margin: auto;
+}
+
+#facilities .container h2{
+    border: 2px solid #000000;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #000000;
+}
+
+#facilities .container h4{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #000000;
+}
+
+/************************/
+/*End - Facilities panel*/
+/************************/
+.field-validation-error{
+    color: white;
+}
+
+/********************************/
+/*Begin - Photo Carroussel Panel*/
+/********************************/
+.carroussel{
+    padding:2%;
+}
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: 100%;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+
+/******************************/
+/*End - Photo Carroussel Panel*/
+/******************************/
+
+/***********************/
+/*Begin - Contact Panel*/
+/***********************/
+.contactPanel {
+    background: url(../Content/img/contact-us-panel.jpg) no-repeat;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.contactPanel .container{
+    min-height: 100%;  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+}
+
+.contactPanel .container h2{
+    border: 2px solid #FFF;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 35px;
+    color: #FFF;
+}
+
+#ContactForm {
+    margin: 0 auto;
+    min-width: 100%;
+}
+/*********************/
+/*End - Contact Panel*/
+/*********************/
+
+/*************************/
+/*Start - Spinner Loading*/
+/*************************/
+#loading
+{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,0.8);
+    z-index:1000;
+}
+  
+#loadingcontent
+{
+    display:table;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+}
+  
+#loadingspinner
+{
+    display: table-cell;
+    vertical-align:middle;
+    width: 100%;
+    text-align: center;
+    font-size:larger;
+    padding-top:80px;
+}
+/***********************/
+/*End - Spinner Loading*/
+/***********************/
+
+/*********************/
+/*Start - Modal panel*/
+/*********************/
+.modal-content {
+    overflow:hidden;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.modal-header {
+    background-color: #99c0ff;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #99c0ff;
+    color: white;
+}
+
+#imageresource {
+    width: 150px;
+    height: 150px;
+}
+/*******************/
+/*End - Modal panel*/
+/*******************/
+
+
+/****************/
+/*Begin - Footer*/
+/****************/
+
+footer {
+    background-color: black;
+    height: 50px;
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 18px;
+    color: grey;
+}
+
+/**************/
+/*End - Footer*/
+/**************/
+
+/***********************/
+/*Begin - Localisation*/
+/***********************/
+#LocalisationPanel .container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background: linear-gradient( rgba(156, 156, 240, 0.5), rgba(140, 236, 140, 0.5)), url('/Content/img/localisationPanel.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#LocalisationPanel .container h2{
+    border: 2px solid #000000;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 35px;
+}
+
+#map {
+    height: 400px;
+    width: 750px;
+    margin-top: 100px;
+    box-shadow: 0 0 75px rgba(0, 0, 0, 0.6);
+}
+
+
+#laReunionPanel .container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#laReunionPanel .container h2{
+    border: 2px solid #000000;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 35px;
+}
+
+/*********************/
+/*End - Localisation*/
+/*********************/
+
+/***********************/
+/*Begin - La Maison*/
+/***********************/
+#welcomePhotoGalleryPanel .container {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    background: linear-gradient( rgba(155, 68, 255, 0.5),rgba(255, 73, 73, 0.2), rgba(0, 0, 0, 0.5)), url('/Content/img/laMaisonPanel.jpg') no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+#welcomePhotoGalleryPanel .container h2{
+    border: 2px solid #000000;
+    margin: 0 auto;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 35px;
+}
+
+#photoGalleryPanel .container {
+    width: 100%;
+    padding: 150px;
+}
+
+#photoGalleryPanel .container #gallery{
+    margin: auto;
+
+}
+
+/*********************/
+/*End - La Maison*/
+/*********************/
+
+/*****************************/
+/*Begin - Vertical Navigation*/
+/*****************************/
+.vNav {
+    position: fixed;
+    top: 80%;
+    left: 90%;
+    width: 50px;
+    z-index: 9999;
+    list-style-type: none;
+}
+.vNav ul {
+    position: relative;
+    padding: 3px;
+    padding-left: 35%;
+}
+.vNav ul li {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 35%;
+    color: black;
+}
+.vNav a {
+    display: block;
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-color: black;
+    text-decoration: none;
+}
+.vNav a:hover {
+    border-radius: 50%;
+    background-color: white;
+    text-decoration: none;
+}
+.vNav a.active {
+    border-radius: 50%;
+    background-color: black;
+    text-decoration: none;
+}
+.label {
+    position: relative;
+    top: -40%;
+    left: -200%;
+    text-align: right;
+    color: black;
+    display: none;
+    font-size: 12px;
+    font-family: 'Poppins', cursive;
+}
+/*****************************/
+/*End - Vertical Navigation*/
+/*****************************/

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../Content/img/comput.png">
+    <title>La Réunion | Location Saisonnière</title>
+    @*CSS Bundle*@
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    @Styles.Render("~/bundles/css")
+
+</head>
+<body>
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                @*<li>
+                    <a class="effectMenu" href="#welcomePanel">Accueil</a>
+                </li>*@
+                <li>
+                    <a class="active effectMenu" href="#briefDescription">Localisation</a>
+                </li>
+                <li>
+                    <a class="effectMenu" href="#facilities">Sur Place</a>
+                </li>
+                <li>
+                    <a class="effectMenu" href="#photoCarroussel">La Maison</a>
+                </li>
+                <li>
+                    <a class="effectMenu" href="#contactPanelContainer">Reserver</a>
+                </li>
+                <li>
+                    <a class="effectMenu" href="#logo">
+                        <img src="/Content/images/NeilSmith_StandAloneLogo_White.png" class="img-responsive">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+@RenderBody()
+<footer>
+    <div class="container">
+        <p>&copy; @DateTime.Now.Year - www.VisitLaReunion.com</p>
+    </div>
+</footer>
+
+@*JS Bundle*@
+@Scripts.Render("~/bundles/js")
+
+</body>
+</html>
+
+
+@***************@
+@*Effect Script*@
+@***************@
+<script>
+    //ON HOVER
+    function animationHover(element, animation) {
+        element = $(element);
+        element.hover(
+            function() {
+                element.addClass('animated ' + animation);
+            },
+            function() {
+                //wait for animation to finish before removing classes
+                window.setTimeout(function() {
+                        element.removeClass('animated ' + animation);
+                    },
+                    2000);
+            });
+    }
+
+    //ON READY
+    function animationIntro(element, animation) {
+        element = $(element);
+        element.addClass('animated ' + animation);
+        window.setTimeout(function() {
+                element.removeClass('animated ' + animation);
+            },
+            2000);
+    }
+  
+    //HOVER
+    //effect - Hover for Menu
+    $(document)
+        .ready(function() {
+            $('.effectMenu')
+                .each(function() {
+                    animationHover(this, 'swing');
+                });
+        });
+</script>
+
+@*CAROUSSEL PHOTO GALLERY (auto run)*@
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+
+@*MODAL POP UP*@
+<script>
+    $(document)
+        .ready(function() {
+            // Show Update Success modal popup
+            if ($('#showSuccessMessage').text().length > 0) {
+                $('#successModal').modal({ backdrop: 'static' });
+            }
+        });
+</script>
+
+@*SPINNER LOADING - Submit contact details*@
+<script>
+    $(function () {
+        $("#submitContact").click(function () {
+            debugger;
+            if ($("#frmContact").valid()) {
+                $("#loading").fadeIn();
+                var opts = {
+                    lines: 12, // The number of lines to draw
+                    length: 7, // The length of each line
+                    width: 4, // The line thickness
+                    radius: 10, // The radius of the inner circle
+                    color: '#000', // #rgb or #rrggbb
+                    speed: 1, // Rounds per second
+                    trail: 60, // Afterglow percentage
+                    shadow: false, // Whether to render a shadow
+                    hwaccel: false // Whether to use hardware acceleration
+                };
+                var target = document.getElementById('loading');
+                var spinner = new Spinner(opts).spin(target);
+            }
+        });
+    });
+</script>
+
+@*Google Map for house location*@
+<script>
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbunbKx8vsHKrNWwhJlsZmSCDawGDeqY8&callback=initMap">
+</script>
+
+@*AOS special effect framework*@
+<script>
+    AOS.init({
+        //disable: window.innerWidth < 1024
+    });
+</script>
+
+@*STELLAR*@
+<script>
+    $(document)
+        .ready(function() {
+            $.stellar({
+                horizontalScrolling: false,
+                responsive: true
+            });
+        });
+</script>
+
+@*Smoothly Scrolling*@
+<script>
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+</script>
+
+@*Vertical side scroll*@
+<script>
+    $(document).ready(function ($) {
+        var parPosition = [];
+        $('.par').each(function () {
+            parPosition.push($(this).offset().top);
+        });
+
+        $('a').click(function () {
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            return false;
+        });
+
+        $('.vNav ul li a').click(function () {
+            $('.vNav ul li a').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('.vNav a').hover(function () {
+            $(this).find('.label').show();
+        }, function () {
+            $(this).find('.label').hide();
+        });
+
+        $(document).scroll(function () {
+            var position = $(document).scrollTop(),
+                index;
+            for (var i = 0; i < parPosition.length; i++) {
+                if (position <= parPosition[i]) {
+                    index = i;
+                    break;
+                }
+            }
+            $('.vNav ul li a').removeClass('active');
+            $('.vNav ul li a:eq(' + index + ')').addClass('active');
+        }).scroll();
+
+        $('.vNav ul li a').click(function () {
+            $('.vNav ul li a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+</script>
