@@ -153,9 +153,9 @@ width: 100%;
 /*******************************/
 
 /**************************/
-/*Start - Facilities panel*/
+/*Start - BuildMuscle panel*/
 /**************************/
-#facilities {
+#buildMuscle {
     background: linear-gradient( rgba(255, 128, 128, 0.3), rgba(255, 255, 153, 0.3),rgba(179, 255, 179, 0.3)), url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
     background-size: cover;
     height: 100%;
@@ -167,11 +167,11 @@ width: 100%;
     
 }
 
-#facilities .container{
+#buildMuscle .container{
     text-align:center;
 }
 
-#facilities .container > .row{
+#buildMuscle .container > .row{
     padding:25px;
 }
 
@@ -183,22 +183,99 @@ width: 100%;
     margin: auto;
 }
 
-#facilities .container h2{
+#buildMuscle .container h2{
     border: 2px solid #000000;
     font-family: 'Lobster', cursive;
     font-size: 65px;
     color: #000000;
 }
 
-#facilities .container h4{
+#buildMuscle .container h4{
     font-family: 'Lobster', cursive;
     font-size: 30px;
     color: #000000;
 }
 
 /************************/
-/*End - Facilities panel*/
+/*End - BuildMuscle panel*/
 /************************/
+
+/*********************************/
+/*Begin - slogan panel*/
+/*********************************/
+
+#slogan{
+    height:250px;
+}
+
+#slogan .container{
+    min-height: 100%;  
+    display: flex;
+    text-align:center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main{
+    background-color:#161616;
+}
+
+.sloganContainer{
+    color:white;
+}
+
+/*******************************/
+/*End - Brief description panel*/
+/*******************************/
+
+/**************************/
+/*Start - burnFat panel*/
+/**************************/
+#burnFat {
+    background: linear-gradient( rgba(255, 128, 128, 0.3), rgba(255, 255, 153, 0.3),rgba(179, 255, 179, 0.3)), url('/Content/images/NeilSmith_BurnFat.jpg') no-repeat;
+    background-size: cover;
+    height: 100%;
+
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one 🙂       */
+    display: flex;
+    align-items: center;
+    
+}
+
+#burnFat .container{
+    text-align:center;
+}
+
+#burnFat .container > .row{
+    padding:25px;
+}
+
+.pins{
+    display: flex;
+}
+
+.pins img{
+    margin: auto;
+}
+
+#burnFat .container h2{
+    border: 2px solid #000000;
+    font-family: 'Lobster', cursive;
+    font-size: 65px;
+    color: #000000;
+}
+
+#burnFat .container h4{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    color: #000000;
+}
+
+/************************/
+/*End - burnFat panel*/
+/************************/
+
 .field-validation-error{
     color: white;
 }
