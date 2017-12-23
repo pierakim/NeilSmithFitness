@@ -65,7 +65,6 @@ width: 100%;
 /*********************************/
 
 .main{
-    /*background: url('/Content/img/WoodBackground3.jpg') no-repeat;*/
     background-size: cover;
     background-color:#161616;
 }
@@ -79,19 +78,37 @@ width: 100%;
     border: 0.1px solid #000000;
     text-align: center;
     margin:15px;
+    color:#ffffff;
 }
 
 .card h3{
-    font-family: 'Lobster', cursive;
-    font-size:30px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size:45px;
     padding-bottom:40px;
+    
 }
 
 .card p{
-    font-family: 'Poppins', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
     margin:0 auto;
     padding-bottom:10px;
 }
+
+.card button{
+     background-color: transparent;
+     border: solid 1px;
+     margin-bottom:20px;
+     color:grey;
+     font-family: 'Roboto', sans-serif;
+}
+
+.card button:hover{
+    color: white;
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+}
+   
 
 @media (min-width: 992px) {
     #photoCarroussel .row {
