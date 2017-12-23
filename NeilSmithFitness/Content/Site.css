@@ -11,7 +11,8 @@ width: 100%;
     left: 0;
     right: 0;
     margin-bottom: 0;
-    border-radius: 0; 
+    border-radius: 0;
+    border:0;
 }
 
 .navbar-brand > img {
@@ -30,13 +31,14 @@ width: 100%;
 /*Begin - Welcome Panel*/
 /***********************/
 #welcomePanel {
-    background: url('/Content/images/NeilSmith_BackgroundHome_1920x1280.png') no-repeat;
+    background: linear-gradient( rgba(255, 0, 0, 0.2),rgba(0, 0, 0, 0.9)), url('/Content/images/NeilSmith_BackgroundHome_1920x1280.png') no-repeat;
     background-size: cover;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-position: center center;
+   
 }
 
 #welcomePanel .container{
@@ -49,14 +51,10 @@ width: 100%;
     flex-direction: column;
 }
 
-#welcomePanel .container h2{
-    border: 2px solid #000000;
-    margin: 0 auto;
-    font-family: 'Lobster', cursive;
-    font-size: 65px;
-    color: #000000;
-    padding: 15px 35px;
-    text-align:left;
+#welcomePanel > div > div > div > img{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+    border-radius: 15px;
 }
 /*********************/
 /*End - Welcome Panel*/
