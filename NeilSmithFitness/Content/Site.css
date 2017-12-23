@@ -108,7 +108,6 @@ width: 100%;
     background-color: #3a3a3a;
     border-color: #3a3a3a;
 }
-   
 
 @media (min-width: 992px) {
     #photoCarroussel .row {
@@ -171,7 +170,7 @@ width: 100%;
 /*Start - BuildMuscle panel*/
 /**************************/
 #buildMuscle {
-    background: linear-gradient( rgba(255, 128, 128, 0.3), rgba(255, 255, 153, 0.3),rgba(179, 255, 179, 0.3)), url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
+    background: linear-gradient( rgba(255, 0, 0, 0.2),rgba(0, 0, 0, 0.9)), url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
     background-size: cover;
     height: 100%;
 
@@ -182,33 +181,39 @@ width: 100%;
     
 }
 
-#buildMuscle .container{
-    text-align:center;
-}
-
-#buildMuscle .container > .row{
-    padding:25px;
-}
-
-.pins{
-    display: flex;
-}
-
-.pins img{
-    margin: auto;
-}
-
-#buildMuscle .container h2{
-    border: 2px solid #000000;
-    font-family: 'Lobster', cursive;
+#buildMuscle .container .temp h2{
+    font-family: 'Alfa Slab One', cursive;
     font-size: 65px;
     color: #000000;
 }
 
-#buildMuscle .container h4{
-    font-family: 'Lobster', cursive;
-    font-size: 30px;
-    color: #000000;
+#buildMuscle .container .temp {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align:right;
+    padding: 15px;
+}
+
+#buildMuscle .container .temp p{
+    font-family: 'Roboto', sans-serif;
+    color:#ffffff;
+    font-size:18px;
+    margin:0 auto;
+    padding-bottom:10px;
+}
+
+#buildMuscle .container .temp button{
+     background-color: transparent;
+     border: solid 1px;
+     margin-bottom:20px;
+     color:grey;
+     font-family: 'Roboto', sans-serif;
+}
+
+#buildMuscle .container .temp button:hover{
+    color: white;
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
 }
 
 /************************/
