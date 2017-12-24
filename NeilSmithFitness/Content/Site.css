@@ -241,7 +241,9 @@ width: 100%;
 }
 
 .sloganContainer{
-    color:white;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 65px;
+    color: #ffffff;
 }
 
 /*******************************/
