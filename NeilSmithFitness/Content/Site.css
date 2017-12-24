@@ -38,7 +38,6 @@ width: 100%;
     align-items: center;
     justify-content: center;
     background-position: center center;
-   
 }
 
 #welcomePanel .container{
@@ -51,11 +50,20 @@ width: 100%;
     flex-direction: column;
 }
 
-#welcomePanel > div > div > div > img{
-    background: rgba(255, 255, 255, 0.2);
-    padding: 25px;
-    border-radius: 15px;
+#welcomePanel .container .temp h2{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 40px;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
+
+#welcomePanel .container .temp {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    text-align:center;
+    padding-bottom: 15px;
+}
+
 /*********************/
 /*End - Welcome Panel*/
 /*********************/
