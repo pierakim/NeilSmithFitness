@@ -31,7 +31,7 @@ width: 100%;
 /*Begin - Welcome Panel*/
 /***********************/
 #welcomePanel {
-    background: linear-gradient( rgba(255, 0, 0, 0.2),rgba(0, 0, 0, 0.9)), url('/Content/images/NeilSmith_BackgroundHome_1920x1280.png') no-repeat;
+    background: url('/Content/images/NeilSmith_BackgroundHome_1920x1280.png') no-repeat;
     background-size: cover;
     height: 100%;
     display: flex;
@@ -58,7 +58,7 @@ width: 100%;
 }
 
 #welcomePanel .container .temp {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     text-align:center;
     padding-bottom: 15px;
@@ -93,7 +93,6 @@ width: 100%;
     font-family: 'Alfa Slab One', cursive;
     font-size:45px;
     padding-bottom:40px;
-    
 }
 
 .card p{
@@ -178,7 +177,7 @@ width: 100%;
 /*Start - BuildMuscle panel*/
 /**************************/
 #buildMuscle {
-    background: linear-gradient(rgba(255, 0, 0, 0.2),rgba(0, 0, 0, 0.9)), url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
+    background: url('/Content/images/NeilSmith_BuildMuscle.jpg') no-repeat;
     background-size: cover;
     height: 100%;
 
@@ -196,7 +195,7 @@ width: 100%;
 }
 
 #buildMuscle .container .temp {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align:right;
     padding: 15px;
@@ -262,7 +261,7 @@ width: 100%;
 /*Start - burnFat panel*/
 /**************************/
 #burnFat {
-    background: linear-gradient(rgba(255, 0, 0, 0.2),rgba(0, 0, 0, 0.9)), url('/Content/images/NeilSmith_BurnFat.jpg') no-repeat;
+    background: url('/Content/images/NeilSmith_BurnFat.jpg') no-repeat;
     background-size: cover;
     height: 100%;
 
@@ -280,7 +279,7 @@ width: 100%;
 }
 
 #burnFat .container .temp {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     text-align:left;
     padding: 15px;
