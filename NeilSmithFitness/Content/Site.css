@@ -376,17 +376,12 @@ width: 100%;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    /*flex-wrap: wrap;*/
 }
 
 .contactPanel .container h2{
-    border: 2px solid #FFF;
-    margin: 0 auto;
-    font-family: 'Lobster', cursive;
+    font-family: 'Alfa Slab One', cursive;
     font-size: 65px;
     color: #000000;
-    text-align: center;
-    padding: 15px 35px;
     color: #FFF;
 }
 
