@@ -482,7 +482,7 @@ footer {
     height: 50px;
 }
 
-footer .container{
+footer .container div{
     display: flex;
     align-items: center;
     flex-direction: column;
