@@ -8,13 +8,11 @@ namespace NeilSmithFitness.Web
         {
             //JS Bundle
             var jsBundles = new ScriptBundle("~/bundles/js").Include(
-                                                "~/Scripts/jquery-{version}.js",
-                                                "~/Scripts/JQueryMigrate.js",
-                                                //"~/Scripts/jquery-ui-{version}.js",
-                                                //"~/Scripts/modernizr-{version}.js",
-                                                "~/Scripts/bootstrap.min.js",
-                                                "~/Scripts/jquery.validate.js",
-                                                "~/Scripts/jquery.validate.unobtrusive.js",
+                                                "~/Scripts/jQuery/jquery-{version}.js",
+                                                "~/Scripts/jQuery/JQueryMigrate.js",
+                                                "~/Scripts/bootstrap/bootstrap.min.js",
+                                                "~/Scripts/jQuery/jquery.validate.js",
+                                                "~/Scripts/jQuery/jquery.validate.unobtrusive.js",
                                                 "~/Scripts/spin.js",
                                                 "~/Scripts/stellar.js",
                                                  "~/Scripts/responsiveSlides.min.js",
@@ -24,8 +22,7 @@ namespace NeilSmithFitness.Web
 
             //CSS Bundle
             var cssBundles = new StyleBundle("~/bundles/css").Include(
-                                                "~/Content/bootstrap.min.css",
-                                                "~/Content/font-awesome.min.css",
+                                                "~/Content/bootstrap/bootstrap.min.css",
                                                 "~/Content/Site.css",
                                                 "~/Content/aos.css"
                                                 );
