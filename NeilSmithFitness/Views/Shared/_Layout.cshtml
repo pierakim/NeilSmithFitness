@@ -47,114 +47,13 @@
 </body>
 </html>
 
-
-@***************@
-@*Effect Script*@
-@***************@
-
-@*CAROUSSEL PHOTO GALLERY (auto run)*@
-<script>
-  $(function() {
-    $(".rslides").responsiveSlides();
-  });
-</script>
-
-@*MODAL POP UP*@
-<script>
-    $(document)
-        .ready(function() {
-            // Show Update Success modal popup
-            if ($('#showSuccessMessage').text().length > 0) {
-                $('#successModal').modal({ backdrop: 'static' });
-            }
-        });
-</script>
-
-@*SPINNER LOADING - Submit contact details*@
-<script>
-    $(function () {
-        $("#submitContact").click(function () {
-            debugger;
-            if ($("#frmContact").valid()) {
-                $("#loading").fadeIn();
-                var opts = {
-                    lines: 12, // The number of lines to draw
-                    length: 7, // The length of each line
-                    width: 4, // The line thickness
-                    radius: 10, // The radius of the inner circle
-                    color: '#000', // #rgb or #rrggbb
-                    speed: 1, // Rounds per second
-                    trail: 60, // Afterglow percentage
-                    shadow: false, // Whether to render a shadow
-                    hwaccel: false // Whether to use hardware acceleration
-                };
-                var target = document.getElementById('loading');
-                var spinner = new Spinner(opts).spin(target);
-            }
-        });
-    });
-</script>
-
-@*Google Map for house location*@
-<script>
-    function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: uluru
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-</script>
+@*Javascript library startup*@
+<script src="~/Scripts/launchPhotoCaroussel.js"></script>@*CAROUSSEL PHOTO GALLERY (auto run)*@
+<script src="~/Scripts/launchSpinnerLoadingAndModalPopUp.js"></script> @*MODAL POP UP - Spinner Loading*@
+<script src="~/Scripts/launchGoogleMap.js"></script>@*Google Map for house location*@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbunbKx8vsHKrNWwhJlsZmSCDawGDeqY8&callback=initMap">
-</script>
-
-@*AOS special effect framework*@
-<script>
-    AOS.init({
-        //disable: window.innerWidth < 1024
-    });
-</script>
-
-@*STELLAR*@
-<script>
-    $(document)
-        .ready(function() {
-            $.stellar({
-                horizontalScrolling: false,
-                responsive: true
-            });
-        });
-</script>
-
-@*Vertical side scroll*@
-<script>
-    $(document).ready(function ($) {
-        //scrolling on click
-        $('a[href*="#"]:not([href="#"])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                var id = target[0].id;
-                var ratio = id == "aboutMe" || id == "photoCarroussel" ? $(window).height() / 4 : 0;
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - ratio
-                    }, 1500);
-                    return false;
-                }
-            }
-        });
-
-        //show/hide label
-        $('.vNav a').hover(function () {
-            $(this).find('.label').show();
-        }, function () {
-            $(this).find('.label').hide();
-        });
-    });
-</script>
+</script>@*Gmap key*@
+<script src="~/Scripts/launchAOS.js"></script>@*AOS special effect framework*@
+<script src="~/Scripts/launchStellar.js"></script>@*STELLAR*@
+<script src="~/Scripts/launchVerticalSmoothlyNav.js"></script>@*Vertical smoothly side scroll*@

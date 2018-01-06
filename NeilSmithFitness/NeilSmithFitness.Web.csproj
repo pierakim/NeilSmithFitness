@@ -207,6 +207,12 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\JQueryMigrate.js" />
+    <Content Include="Scripts\launchAOS.js" />
+    <Content Include="Scripts\launchGoogleMap.js" />
+    <Content Include="Scripts\launchSpinnerLoadingAndModalPopUp.js" />
+    <Content Include="Scripts\launchPhotoCaroussel.js" />
+    <Content Include="Scripts\launchStellar.js" />
+    <Content Include="Scripts\launchVerticalSmoothlyNav.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\responsiveSlides.min.js" />
     <Content Include="Scripts\skrollr.js" />
