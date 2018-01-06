@@ -105,8 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\animate.css" />
-    <Content Include="Content\animate.min.css" />
     <Content Include="Content\aos.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -114,6 +112,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\Logos\NeilSmith_Logo.NoText.Black.ico" />
     <Content Include="Content\images\Logos\NeilSmith_Logo.NoText.Black.svg" />
     <Content Include="Content\images\Logos\NeilSmith_Logo.Text.Black.svg" />
     <Content Include="Content\images\NeilSmith - PT\NeilSmith - PT01.jpg" />

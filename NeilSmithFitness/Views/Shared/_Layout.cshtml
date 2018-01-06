@@ -3,12 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="~/Content/images/NeilSmith_Logo_NoText.svg">
+    <link rel="icon" type="image/svg" href="~/Content/images/Logos/NeilSmith_Logo.NoText.Black.ico">
     <title>Neil Smith | Fitness</title>
     @*CSS Bundle*@
-    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
     @Styles.Render("~/bundles/css")
@@ -17,22 +14,13 @@
 <body>
 
 <nav class="navbar navbar-inverse" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-    </div>
-   
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Build Muscle</a></li>
-            <li><a href="#">Get Lean</a></li>
-            <li><a href="#">Stay Focus</a></li>
-            <li><a href="#">Programs</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#buildMuscle">Build Muscle</a></li>
+            <li><a href="#burnFat">Burn Fat</a></li>
+            <li><a href="#photoCarroussel">Programs</a></li>
+            <li><a href="#contactPanelContainer">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a target="_blank" href="https://www.instagram.com/neilsmith1984/">Instagram</a></li>
@@ -61,43 +49,6 @@
 @***************@
 @*Effect Script*@
 @***************@
-<script>
-    //ON HOVER
-    function animationHover(element, animation) {
-        element = $(element);
-        element.hover(
-            function() {
-                element.addClass('animated ' + animation);
-            },
-            function() {
-                //wait for animation to finish before removing classes
-                window.setTimeout(function() {
-                        element.removeClass('animated ' + animation);
-                    },
-                    2000);
-            });
-    }
-
-    //ON READY
-    function animationIntro(element, animation) {
-        element = $(element);
-        element.addClass('animated ' + animation);
-        window.setTimeout(function() {
-                element.removeClass('animated ' + animation);
-            },
-            2000);
-    }
-  
-    //HOVER
-    //effect - Hover for Menu
-    $(document)
-        .ready(function() {
-            $('.effectMenu')
-                .each(function() {
-                    animationHover(this, 'swing');
-                });
-        });
-</script>
 
 @*CAROUSSEL PHOTO GALLERY (auto run)*@
 <script>
@@ -178,64 +129,28 @@
         });
 </script>
 
-@*Smoothly Scrolling*@
-<script>
-    $('a[href*="#"]:not([href="#"])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
-</script>
-
 @*Vertical side scroll*@
 <script>
     $(document).ready(function ($) {
-        var parPosition = [];
-        $('.par').each(function () {
-            parPosition.push($(this).offset().top);
+        //scrolling on click
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - $(window).height()/4
+                    }, 1500);
+                    return false;
+                }
+            }
         });
 
-        $('a').click(function () {
-            $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-            }, 500);
-            return false;
-        });
-
-        $('.vNav ul li a').click(function () {
-            $('.vNav ul li a').removeClass('active');
-            $(this).addClass('active');
-        });
-
+        //show/hide label
         $('.vNav a').hover(function () {
             $(this).find('.label').show();
         }, function () {
             $(this).find('.label').hide();
-        });
-
-        $(document).scroll(function () {
-            var position = $(document).scrollTop(),
-                index;
-            for (var i = 0; i < parPosition.length; i++) {
-                if (position <= parPosition[i]) {
-                    index = i;
-                    break;
-                }
-            }
-            $('.vNav ul li a').removeClass('active');
-            $('.vNav ul li a:eq(' + index + ')').addClass('active');
-        }).scroll();
-
-        $('.vNav ul li a').click(function () {
-            $('.vNav ul li a').removeClass('active');
-            $(this).addClass('active');
         });
     });
 </script>

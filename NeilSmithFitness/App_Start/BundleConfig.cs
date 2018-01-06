@@ -26,7 +26,6 @@ namespace NeilSmithFitness.Web
             var cssBundles = new StyleBundle("~/bundles/css").Include(
                                                 "~/Content/bootstrap.min.css",
                                                 "~/Content/font-awesome.min.css",
-                                                "~/Content/animate.css",
                                                 "~/Content/Site.css",
                                                 "~/Content/aos.css"
                                                 );

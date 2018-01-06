@@ -37,7 +37,7 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-position: center center;
+    background-position: center top;
 }
 
 #welcomePanel .container{
@@ -122,7 +122,7 @@ width: 100%;
         align-items: center;
     }
 
-    #briefDescription .row {
+    #aboutMe .row {
         display: flex;
         align-items: center;
     }
@@ -134,7 +134,7 @@ width: 100%;
         align-items: center;
     }
 
-    #briefDescription .row {
+    #aboutMe .row {
         display: flex;
         align-items: center;
     }
@@ -145,7 +145,7 @@ width: 100%;
         display:none;
     }
 
-    #briefDescription .noDisplayForMobile{
+    #aboutMe .noDisplayForMobile{
         display:none;
     }
 
@@ -160,7 +160,7 @@ width: 100%;
         display:none;
     }
 
-    #briefDescription .noDisplayForMobile{
+    #aboutMe .noDisplayForMobile{
         display:none;
     }
 
@@ -513,7 +513,7 @@ footer .container{
 #LocalisationPanel .container h2{
     border: 2px solid #000000;
     margin: 0 auto;
-    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     color: #000000;
     text-align: center;
@@ -543,7 +543,7 @@ footer .container{
 #laReunionPanel .container h2{
     border: 2px solid #000000;
     margin: 0 auto;
-    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     color: #000000;
     text-align: center;
@@ -573,7 +573,7 @@ footer .container{
 #welcomePhotoGalleryPanel .container h2{
     border: 2px solid #000000;
     margin: 0 auto;
-    font-family: 'Lobster', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     color: #000000;
     text-align: center;
@@ -599,7 +599,7 @@ footer .container{
 /*****************************/
 .vNav {
     position: fixed;
-    top: 80%;
+    top: 70%;
     left: 90%;
     width: 50px;
     z-index: 9999;
@@ -614,7 +614,7 @@ footer .container{
     position: relative;
     padding-bottom: 20px;
     padding-left: 35%;
-    color: black;
+    color: #ffffff;
 }
 .vNav a {
     display: block;
@@ -623,7 +623,7 @@ footer .container{
     text-indent: -9999px;
     border-radius: 50%;
     border: 2px solid;
-    border-color: black;
+    border-color: #ffffff;
     text-decoration: none;
 }
 .vNav a:hover {
@@ -633,7 +633,7 @@ footer .container{
 }
 .vNav a.active {
     border-radius: 50%;
-    background-color: black;
+    background-color: #ffffff;
     text-decoration: none;
 }
 .label {
@@ -641,10 +641,10 @@ footer .container{
     top: -40%;
     left: -200%;
     text-align: right;
-    color: black;
+    color: #ffffff;
     display: none;
     font-size: 12px;
-    font-family: 'Poppins', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 /*****************************/
 /*End - Vertical Navigation*/
